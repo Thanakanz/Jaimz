@@ -3,14 +3,19 @@ import { ref } from 'vue'
 
 defineProps<{ msg: string }>()
 
+const message = ref('')
 const count = ref(0)
+
+const add = () => {
+  count.value++
+}
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
-
+  <h1>{{ msg + ' ' + message }}</h1>
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
+    <input type="text" v-model="message">
     <p>
       Edit
       <code>components/HelloWorld.vue</code> to test HMR
