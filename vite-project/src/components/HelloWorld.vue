@@ -37,7 +37,6 @@ const add = () => {
       </div>
     </div>
   </div>
-  <pre>{{ list }}</pre>
   <div class="card">
     <input type="text" v-model="message">
     <button type="button" @click="getlist()">GET LIST</button>
